@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Real time chat app</title>
+</head>
+<body>
+    <!-- container  -->
+    <div class="container">
+        <h1 class="title">Chat Room App</h1>
+    <!-- chat room   -->
+    <div class="chat-room">
+        <p> choose chat room : </p>
+        <button class="btn" id="general">#general</button>
+        <button class="btn" id="gaming">#gaming</button>
+        <button class="btn" id="music">#music</button>
+        <button class="btn" id="user">#user</button>
+    </div>
+
+    <!-- chat room list / window  -->
+    <div class="chat-window card">
+        <ul class="list"></ul>
+    </div>
+
+    <!--  new chat form -->
+    <form action="" class="new-chat form">
+        <div class="input-group">
+            <small class="text">Your message</small>
+            <input type="text" class="input-field" id="message" placeholder="Enter new message" required>
+            <input type="submit" class="submit" value="Send">
+        </div>
+    </form>
+
+    <!-- update  name form  -->
+    <form action="" class="new-name form">
+        <div class="input-group">
+            <small class="text">Update name</small>
+            <input type="text" class="input-field"  id="name" placeholder="Update username" required>
+            <input type="submit" class="submit" value="Update">
+        </div>
+        <small class="update-name"> </small>
+    </form>
+   </div>
+
+   <!-- date fns library  -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js" 
+   integrity="sha512-F+u8eWHrfY8Xw9BLzZ8rG/0wIvs0y+JyRJrXjp3VjtFPylAEEGwKbua5Ip/oiVhaTDaDs4eU2Xtsxjs/9ag2bQ=="
+   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>   
+   <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>   
+   <script>
+     var firebaseConfig = {
+       apiKey: "AIzaSyCdmU_qEbkc_gwBOB_O7TNshwh8zXzXMgc",
+       authDomain: "fir-db-1b3f9.firebaseapp.com",
+       projectId: "fir-db-1b3f9",
+       storageBucket: "fir-db-1b3f9.appspot.com",
+       messagingSenderId: "752468894189",
+       appId: "1:752468894189:web:fa908c38533c7164c087e4",
+       measurementId: "G-C4MRVYMXXV"
+     };
+     // Initialize Firebase
+     firebase.initializeApp(firebaseConfig);
+     const db = firebase.firestore();
+   </script>    
+    <script src="script/chat.js"></script>
+    <script src="script/ui.js"></script>
+    <script src="script/app.js"></script>
+
+</body>
+</html>

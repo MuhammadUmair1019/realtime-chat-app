@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* container  */
+.container{
+    max-width: 600px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.title{
+    text-align: center;
+}
+
+/* chat room  */
+.chat-room{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.chat-room .btn{
+    margin-left: 0.5em;
+    padding: .8em;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    outline: none;
+}
+
+/* chat room list/ window  */
+.card {
+    border: 1px solid #ddd;
+    margin: 1.5rem 0;
+}
+.list{
+    list-style: none;
+}
+.list-item{
+    border-bottom: 1px solid #ddd;
+    width: 90%;
+    padding: 10px 0;
+
+}
+.username{
+    font-weight: bold;
+}
+
+/* new chat form  */
+.form {
+    margin: 1rem 0;
+}
+
+.form .input-group{
+    display: flex;
+    border-radius: 20px;
+    position: relative;
+}
+
+.input-field{
+    width: 100%;
+    padding: 0 0.8em;
+}
+
+.submit{
+    background: black;
+    color: white;
+    padding: 0 1.5rem;
+}
+.submit:focus{
+    outline: none !important;
+}
+
+.update-name{
+    text-align: center;
+    width:80%;
+    position: absolute;
+    margin-top: 10px;
+    opacity: 0.6;
+    transition: all 1s 1s ease-in-out;
+}
